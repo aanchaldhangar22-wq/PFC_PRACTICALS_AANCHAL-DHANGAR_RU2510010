@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int a[100];
+//AANCHAL DHANGAR RU 2025 10010//
+printf("Enter size of array: ");
+scanf("%d", &n);
+printf("Enter %d elements:\n", n);
+for (i = 0; i < n; i++) {
+scanf("%d", &a[i]);
+}
+for (i = 0; i < n / 2; i++) {
+int temp = a[i];
+a[i] = a[n - 1 - i];
+a[n - 1 - i] = temp;
+}
+printf("Reversed array:\n");
+for (i = 0; i < n; i++) {
+printf("%d ", a[i]);
+}
+return 0;
+}
+//OUTPUT//
+//Enter size of array: 5
+//Enter 5 elements:
+//4 5 3 2 1//
+//Reversed array://
+//1 2 3 5 4// 
